@@ -1,18 +1,16 @@
 const board = document.getElementById('board')
-// const boxes = document.querySelectorAll('.box')
-console.log(board)
-// console.log(boxes)
+// console.log(board)
 const shadowGameBoard = [null, null, null, null, null, null, null, null, null]
 let myPlayerOne = true;
+ 
 
 
 
-
-function theGame(process) {
+function theGame(process) {``
 // console.log(theGame)
 // how do i know if the move is a X or O
 // how do i know space is free
-// can not choose a box if character is already in it
+// can not choose a box if character is already in it                                  
 const correctBox= process.target;
 const winningCombinations = [
     [0, 1, 2],
@@ -43,10 +41,16 @@ if(correctBox.innerText.length <1){
          const thirdWinningSquare = winningCombo[2];
 
     //     console.log(winningCombo[0])
-
+        const allSpotsTakenUp= shadowGameBoard.every((spot) => typeof spot === 'string')
          if(shadowGameBoard[firstWinningSquare]!=null && shadowGameBoard[firstWinningSquare]===shadowGameBoard[secondWinningSquare] && shadowGameBoard[secondWinningSquare]===shadowGameBoard[thirdWinningSquare]) {
             alert('winner')
+            document.location.reload()
          }
+         else if(allSpotsTakenUp) {
+             alert('Tie')
+             document.location.reload()
+        }
+         
     }
 
     // console.log(firstWinningSquare)
@@ -54,13 +58,8 @@ if(correctBox.innerText.length <1){
     // console.log(thirdWinningSquare)
     // console.log(winningCombinations[i]);
 }
-
-
-
 // can not choose a box if the player before you has won game
-console.log(shadowGameBoard)
-
-// }    
+// console.log(shadowGameBoard)
 
 function theCharacters() {
     if(myPlayerOne) {
