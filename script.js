@@ -33,58 +33,20 @@ if(correctBox.innerText.length <1){
     // console.log(choosenIndex)
     shadowGameBoard.splice(choosenIndex, 1, letter)
 }
-for(const winningCombo of winningCombinations) {
-    const firstWinningSquare = shadowGameBoard[winningCombo[0]];
-    const secondWinningSquare = shadowGameBoard[winningCombo[1]];
-    const thirdWinningSquare = shadowGameBoard[winningCombo[2]];
-    const fourthWinningSquare = shadowGameBoard[winningCombo[3]];
-    const fifthWinningSquare = shadowGameBoard[winningCombo[4]];
-    const sixWinningSquare = shadowGameBoard[winningCombo[5]];
-    const sevenWinningSquare = shadowGameBoard[winningCombo[6]];
-    const eightWinningSquare = shadowGameBoard[winningCombo[7]];
-    
-    
-    if(firstWinningSquare===secondWinningSquare && firstWinningSquare===thirdWinningSquare) {
-        console.log('winner')
-    }
-    if(secondWinningSquare===fifthWinningSquare && secondWinningSquare===eightWinningSquare) {
-        console.log('winner')
-    }
-    if(fourthWinningSquare===fifthWinningSquare && fourthWinningSquare===sixWinningSquare) {
-        console.log('winner')
-    }
-    if(firstWinningSquare===secondWinningSquare && firstWinningSquare===thirdWinningSquare) {
-        console.log('winner')
-    }
-    if(firstWinningSquare===secondWinningSquare && firstWinningSquare===thirdWinningSquare) {
-        console.log('winner')
-    }
-    if(firstWinningSquare===secondWinningSquare && firstWinningSquare===thirdWinningSquare) {
-        console.log('winner')
-    }
-    if(firstWinningSquare===secondWinningSquare && firstWinningSquare===thirdWinningSquare) {
-        console.log('winner')
-    }
-    if(firstWinningSquare===secondWinningSquare && firstWinningSquare===thirdWinningSquare) {
-        console.log('winner')
-    }
-    // for(let i = 0; i < winningCombinations.length; i++) {
-    //     const winningCombo = winningCombinations[i];
-    //     // alert('Winner')
 
-    //     const firstWinningSquare = winningCombo[0];
-    //     const secondWinningSquare = winningCombo[1];
-    //      const thirdWinningSquare = winningCombo[2];
+    for(let i = 0; i < winningCombinations.length; i++) {
+        const winningCombo = winningCombinations[i];
+        // alert('Winner')
+
+        const firstWinningSquare = winningCombo[0];
+        const secondWinningSquare = winningCombo[1];
+         const thirdWinningSquare = winningCombo[2];
 
     //     console.log(winningCombo[0])
 
-    //      if(firstWinningSquare === secondWinningSquare  && firstWinningSquare===thirdWinningSquare) {
-    //         alert('someone won')
-    //       }
-
-        //  if(firstWinningSquare!=null && firstWinningSquare===secondWinningSquare && firstWinningSquare===thirdWinningSquare) {
-
-        //  }
+         if(shadowGameBoard[firstWinningSquare]!=null && shadowGameBoard[firstWinningSquare]===shadowGameBoard[secondWinningSquare] && shadowGameBoard[secondWinningSquare]===shadowGameBoard[thirdWinningSquare]) {
+            alert('winner')
+         }
     }
 
     // console.log(firstWinningSquare)
